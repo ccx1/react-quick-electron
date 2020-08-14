@@ -13,6 +13,7 @@ module.exports = {
         filename: 'assets/js/[name].[hash:8].js',
         chunkFilename: 'assets/js/[name].[hash:8].js'
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {

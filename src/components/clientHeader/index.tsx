@@ -1,21 +1,20 @@
 import * as React from 'react';
 import './index.less'
 import {Button} from 'antd';
-
-// let win: any = ;
-let {ipcRenderer} = (window as any).electron;
+import {CommandsRegistry} from "@/utils/command";
+import { MinusOutlined,CloseOutlined } from '@ant-design/icons';
 
 const ClientHeader: React.FC<any> = () => {
 
     return <div className={"client-header"}>
         <div className={"drag-header"}/>
         <div className={"client-header-wrapper"}>
-            <Button type="primary" onClick={() => {
-                console.log(win)
-                ipcRenderer.send("closeWindow")
-            }}>关闭</Button>
-            <Button type="primary">缩放</Button>
-            <Button type="primary">缩小</Button>
+            <Button type="primary" shape="circle" onClick={() => {
+                CommandsRegistry.execCommand({code:"closeWindow"})
+            }} icon={<CloseOutlined />}/>
+            <Button type="primary" shape="circle" danger onClick={()=>{
+                CommandsRegistry.execCommand({code:"miniWindow"})
+            }} icon={<MinusOutlined />}/>
         </div>
     </div>
 }
