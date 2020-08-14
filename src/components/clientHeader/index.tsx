@@ -2,8 +2,8 @@ import * as React from 'react';
 import './index.less'
 import {Button} from 'antd';
 
-let win: any = window;
-let {ipcRenderer} = win.electron;
+// let win: any = ;
+let {ipcRenderer} = (window as any).electron;
 
 const ClientHeader: React.FC<any> = () => {
 

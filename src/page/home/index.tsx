@@ -56,7 +56,6 @@ class Home extends React.Component<IHomeProps, IHomeState> {
                 {/*<Button onClick={()=>{*/}
                 {/*    this.props.dispatch(action.changeCollapsed(!this.props.pageInfo.collapsed))*/}
                 {/*}}>切换</Button>*/}
-                {/*<Slider/>*/}
                 <TransferBar/>
 
             </div>
