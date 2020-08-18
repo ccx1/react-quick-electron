@@ -34,7 +34,7 @@ function createWindow() {
     }
 
     CommandsRegistry.registerCommand("closeWindow", () => {
-        app.exit()
+        app.exit(0)
     })
 
     CommandsRegistry.registerCommand("miniWindow", (event, args) => {
@@ -42,7 +42,6 @@ function createWindow() {
     })
 
     CommandsRegistry.registerCommand("resizeWindow", (event, args) => {
-        global.isMaximized = win.isMaximized()
         if (!win.isMaximized()) {
             win.maximize()
         } else {

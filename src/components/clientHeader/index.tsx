@@ -14,6 +14,7 @@ const ClientHeader: React.FC<any> = () => {
     return <div className={"client-header"}>
         <div className={"drag-header"}/>
         <div className={"client-header-wrapper"}>
+
             <Button type="primary"  onClick={() => {
                 CommandsRegistry.execCommand({code: "miniWindow"})
             }} icon={<MinusOutlined/>}/>

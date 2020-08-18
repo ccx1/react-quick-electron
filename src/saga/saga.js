@@ -1,11 +1,10 @@
 /**
  * @file saga
  */
-import {effects} from 'redux-saga';
 import actions from '../action/action';
 import * as api from '../api/api';
 
-const {fork, put, call, take, all, select} = effects;
+import {fork, put, call, take, all, select} from 'redux-saga/effects';
 
 function* getPageData() {
     try {

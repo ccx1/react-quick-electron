@@ -46,7 +46,7 @@ module.exports = {
                     {
                         loader: 'less-loader',
                         options: {
-                            javascriptEnabled: true
+                            javascriptEnabled:true
                         }
                     }
                 ],
@@ -58,7 +58,9 @@ module.exports = {
                     loader: 'style-loader'
                 },
                     {
-                        loader: 'css-loader'
+                        loader: 'css-loader',
+                        options: {
+                        }
                     },
                     {
                         loader: 'postcss-loader',
@@ -69,7 +71,10 @@ module.exports = {
                         }
                     },
                     {
-                        loader: 'less-loader'
+                        loader: 'less-loader',
+                        options: {
+                            javascriptEnabled:true
+                        }
                     }
                 ],
                 exclude: path.resolve(__dirname, 'node_modules')

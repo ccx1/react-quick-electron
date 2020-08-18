@@ -8,7 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 
-module.exports = merge.smart(baseWebpackConfig, {
+module.exports = merge.merge(baseWebpackConfig, {
     mode: 'production',
     output: {
         publicPath: './'

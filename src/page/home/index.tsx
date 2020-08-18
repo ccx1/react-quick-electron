@@ -32,31 +32,6 @@ class Home extends React.Component<IHomeProps, IHomeState> {
     render() {
         return (
             <div>
-                <Link to={'/login'}>
-                    首页
-                </Link>
-                <Button onClick={() => {
-                    this.setState({showUploadModal: true})
-                }}>上传文件</Button>
-                <UploadFile
-                    uploadOptions={{
-                        data: {},
-                        filename: "file",
-                        action: config.GLOBAL_CONFIG.requestUrl.getJobInfo
-                    }}
-                    accept={'.doc,.xlsx,.txt'}
-                    visible={this.state.showUploadModal}
-                    onOk={() => {
-                        this.setState({showUploadModal: false})
-                    }}
-                    onCancel={() => {
-                        this.setState({showUploadModal: false})
-                    }}
-                />
-                {/*<Button onClick={()=>{*/}
-                {/*    this.props.dispatch(action.changeCollapsed(!this.props.pageInfo.collapsed))*/}
-                {/*}}>切换</Button>*/}
-                <TransferBar/>
 
             </div>
         );
