@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cross-env NODE_ENV=development electron .",
-    "agile-build": "cross-env NODE_ENV=production electron-builder --win --ia32"
+    "agile-win32": "cross-env NODE_ENV=production electron-builder --win --ia32",
+    "agile-mac": "cross-env NODE_ENV=production electron-builder --mac"
   },
   "build": {
     "appId": "app",

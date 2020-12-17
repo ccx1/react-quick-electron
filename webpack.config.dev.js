@@ -17,14 +17,14 @@ module.exports = merge.merge(baseWebpackConfig, {
             'Access-Control-Allow-Origin': '*'
         },
         proxy: {
-            '/test/*': {
-                target: 'http://127.0.0.1:3001',
+            '/web/*': {
+                target: 'http://127.0.0.1:8051',
                 changeOrigin: true,
                 secure: false,
                 // 替换包含test的接口
-                pathRewrite: {
-                    '^/test/*': ''
-                }
+                // pathRewrite: {
+                //     '^/test/*': ''
+                // }
             }
         }
     },

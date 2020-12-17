@@ -1,14 +1,14 @@
-const {app, BrowserWindow, remote } = require('electron')
+const {app, BrowserWindow, remote, nativeImage} = require('electron')
 const path = require('path');
 global.electron = require('electron')
 process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
 const {CommandsRegistry} = require('./command');
 
 const area = {
-    width:800,
-    height:600,
-    minWidth:800,
-    minHeight:600
+    width: 800,
+    height: 600,
+    minWidth: 800,
+    minHeight: 600
 }
 
 function createWindow() {
@@ -19,7 +19,7 @@ function createWindow() {
             nodeIntegration: true
         },
         frame: false,
-        icon: process.env.NODE_ENV === 'development' ? './logo.ico' : path.resolve(__dirname, '../logo.ico'),
+        icon: process.env.NODE_ENV === 'development' ? nativeImage.createFromPath('./logo.ico') : path.resolve(__dirname, '../logo.ico'),
         resizable: true,
         // titleBarStyle: 'default',
         // maximizable:true
